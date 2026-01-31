@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4899459849485558106}
   - component: {fileID: 9022999564263764796}
   m_Layer: 0
-  m_Name: Generic Event
+  m_Name: 'Event 10 [Pressure Ridged]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,12 +44,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aedab12da9c60345844e11bc800c057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StatEffected: 0100000002000000
-  MagnitutedOfChange: fffffffffeffffff
-  MainText: Its A Bear
+  StatChangeOnFail: 00000000
+  StatChangeOnPass: 00000000
+  NumberChangedOnFail: fdffffff
+  NumberChangedOnPass: 00000000
+  StatValueToPass: 63000000
+  StatMesured: 00000000
+  MainText: The pathway ahead goes through a series of pressure ridges which stab
+    towards the sky like angry claws.
   Options:
-  - Run
-  - Fight
-  Outcome:
-  - You Escaped but feel more exausted -1 Fatigue
-  - You Manage to scare it off after a bit of a scuffel, but not un harmerd -2 gear
+  - Continue
+  FailOutcome:
+  - You manage to get through the landscape but it took three times longer than intended.
+    Body Warmth -3.
+  PassOutcome:
+  - 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4899459849485558106}
   - component: {fileID: 9022999564263764796}
   m_Layer: 0
-  m_Name: Generic Event 1
+  m_Name: Generic Event
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,12 +44,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aedab12da9c60345844e11bc800c057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StatEffected: 0000000000000000
-  MagnitutedOfChange: 01000000ffffffff
-  MainText: A Fire
+  EffectedStatsFail: 0200000004000000
+  EffectedStatsPass: 0200000003000000
+  MagnitutedOfChangeFail: fefffffffeffffff
+  MagnitutedOfChangePass: ffffffff04000000
+  effectors: 050000000a000000
+  Goal: 0100000004000000
+  MainText: Its A Bear
   Options:
-  - Use
-  - Leave
-  Outcome:
-  - The Fire Warms you up +1 Temprature
-  - you fell the bite of the cold -1 Temprature
+  - Run
+  - Fight
+  FailOutcome:
+  - You feel the Impact of your hard journey and take a few hit before esscapeing
+    -2 fatigue
+  - 'The bear is much too strong for you, it gets scared away but not before leaving
+    a scar on you sanity -2 sanity
+
+'
+  PassOutcome:
+  - You succsessfully escape the bear without wasteing much energy. Neutral
+  - 'Your struggles so far have hardend your mind and body enough to overwhell the
+    bear, it shall be your next meal instead.
+
+
+    +2 Hunger'

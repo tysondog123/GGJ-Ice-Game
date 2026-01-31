@@ -1,6 +1,8 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 using UnityEngine.UIElements.Experimental;
 
 public class PlayerStats : MonoBehaviour
@@ -17,6 +19,7 @@ public class PlayerStats : MonoBehaviour
     float TimeLeft=1800;
     public TextMeshProUGUI Time;
     public GameObject menu;
+    public Transform[] Destination;
 
     private void Start()
     {
@@ -65,4 +68,11 @@ public class PlayerStats : MonoBehaviour
             updateUITime();
         }
     }
+    public void WinCon()
+    {
+       SceneManager.LoadScene("Win");
+    }
 }
+
+
+    

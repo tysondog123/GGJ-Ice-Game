@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEditor.Tilemaps;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EventController : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class EventController : MonoBehaviour
 
     public GameObject Destination;
     public GameObject MapButtons;
+    public Vector3 direction;
+    public GameObject Map;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -41,23 +44,48 @@ public class EventController : MonoBehaviour
         MapButtons.gameObject.SetActive(false);
         ChoiceUI.SetActive(true);
         MainText.text = Event.GetComponent<CustomEvents>().MainText;
+        if (Event.GetComponent<CustomEvents>().Options.Length <= 1) 
+        {
+            options[1].gameObject.SetActive(false);
+        }
+        else
+        {
+            options[1].gameObject.SetActive(true);
+            options[1].text = Event.GetComponent<CustomEvents>().Options[1];
+            
+        }
         options[0].text = Event.GetComponent<CustomEvents>().Options[0];
-        options[1].text = Event.GetComponent<CustomEvents>().Options[1];
     }
     public void Effect(int Selected)
     {
+        if (options[0].text == "Retreat" || options[1].text == "Retreat")
+        {
+            MoveBack();
+        }
         CustomEvents custom = chosenEvent.GetComponent<CustomEvents>();
-        if(custom != null && custom.effectors[Selected]) {
-        playerStats.EffectStat(custom.Option1EffectedStats[Selected], custom.MagnitutedOfChange[Selected]);
-        Debug.Log(custom.MagnitutedOfChange[Selected]);
-        ChoiceUI.SetActive(false);
-        ResultUI.SetActive(true);
-        Results.text = custom.Outcome[Selected];
+        if(custom != null && playerStats.Stats[custom.StatMesured[Selected]]< custom.StatValueToPass[Selected])
+        {
+            playerStats.EffectStat(custom.StatChangeOnFail[Selected], custom.NumberChangedOnFail[Selected]);
+            ChoiceUI.SetActive(false);
+            ResultUI.SetActive(true);
+            Results.text = custom.FailOutcome[Selected];
+        }else
+        {
+            playerStats.EffectStat(custom.StatChangeOnPass[Selected], custom.NumberChangedOnPass[Selected]);
+            ChoiceUI.SetActive(false);
+            ResultUI.SetActive(true);
+            Results.text = custom.PassOutcome[Selected];
+        }
+        
     }
     public void CloseMenu()
     {
         ResultUI.SetActive(false);
         MapButtons.SetActive(true);
+    }
+    public void MoveBack()
+    {
+        Map.transform.position = Map.transform.position - direction;
     }
 
 }
