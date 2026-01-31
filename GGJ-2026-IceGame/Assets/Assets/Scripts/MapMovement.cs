@@ -30,6 +30,7 @@ public class MapMovement : MonoBehaviour
             direction = Player.transform.position - transform.position;
             Map.transform.position = Map.transform.position + direction;
             EventController.direction = direction;
+            EventController.range = Range;
             EventController.RandomiseEvent();
         }
         

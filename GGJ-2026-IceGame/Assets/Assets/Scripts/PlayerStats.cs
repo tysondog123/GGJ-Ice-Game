@@ -7,10 +7,14 @@ using UnityEngine.UIElements.Experimental;
 
 public class PlayerStats : MonoBehaviour
 {
-    //public int Temprature;
-    //public int Gear;
-    //public int Sanity;
-    //public int Fatigue;
+    public Sprite[] Temprature;
+    public Sprite[] Gear;
+    public Sprite[] Sanity;
+    public Sprite[] Fatigue;
+    public Sprite[] hunger;
+
+    
+
     [Header("1-Temprature, 2-Fatigue, 3-Gear status, 4-Hunger, 5-Sanity")]
     public int[] Stats;
     public int[] StatMax;
@@ -20,6 +24,7 @@ public class PlayerStats : MonoBehaviour
     public TextMeshProUGUI Time;
     public GameObject menu;
     public Transform[] Destination;
+    public GameObject[] UiImages;
 
     private void Start()
     {
@@ -29,8 +34,8 @@ public class PlayerStats : MonoBehaviour
     {
         if(Stats[WhichStat] + Change <= StatMax[WhichStat])
         {
-            
             Stats[WhichStat] = Stats[WhichStat]+ Change;
+            UpdateUI();
         }
     }
    IEnumerator TimeTillFreeze()
@@ -68,9 +73,14 @@ public class PlayerStats : MonoBehaviour
             updateUITime();
         }
     }
-    public void WinCon()
+    public void UpdateUI()
     {
-       SceneManager.LoadScene("Win");
+        Debug.Log(Temprature[Stats[1]]);
+        UiImages[0].GetComponent<Image>().sprite = Temprature[Stats[0]];
+        UiImages[1].GetComponent<Image>().sprite = Fatigue[Stats[1]];
+        UiImages[2].GetComponent<Image>().sprite = Gear[Stats[2]];
+        UiImages[3].GetComponent<Image>().sprite = hunger[Stats[3]];
+        UiImages[4].GetComponent<Image>().sprite = Sanity[Stats[4]];
     }
 }
 

@@ -1,6 +1,8 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEditor.Tilemaps;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class EventController : MonoBehaviour
@@ -21,6 +23,7 @@ public class EventController : MonoBehaviour
     public GameObject MapButtons;
     public Vector3 direction;
     public GameObject Map;
+    public float range;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -86,6 +89,13 @@ public class EventController : MonoBehaviour
     public void MoveBack()
     {
         Map.transform.position = Map.transform.position - direction;
+    }
+    public void WinCon()
+    {
+        if (direction.magnitude < range && direction.magnitude > 5)
+        {
+            SceneManager.LoadScene("Win");
+        }
     }
 
 }
