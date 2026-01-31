@@ -2,15 +2,13 @@ using UnityEngine;
 
 public class CustomEvents : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public int[] StatEffected;
+    public int[] MagnitutedOfChange= new int[2];
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [TextArea(10, 10)]
+    public string MainText;
+    public string[] Options = new string[2];
+
+    [TextArea(10,10)]
+    public string[] Outcome = new string[2];
 }
