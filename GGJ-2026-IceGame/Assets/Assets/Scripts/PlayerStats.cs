@@ -24,11 +24,11 @@ public class PlayerStats : MonoBehaviour
     }
     public void EffectStat(int WhichStat, int Change)
     {
-        if((Stats[WhichStat] += Change) <= StatMax[WhichStat])
+        if(Stats[WhichStat] + Change <= StatMax[WhichStat])
         {
-            Stats[WhichStat] += Change;
+            
+            Stats[WhichStat] = Stats[WhichStat]+ Change;
         }
-        
     }
    IEnumerator TimeTillFreeze()
    {

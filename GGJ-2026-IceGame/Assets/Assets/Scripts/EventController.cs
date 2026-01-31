@@ -17,6 +17,7 @@ public class EventController : MonoBehaviour
 
 
     public GameObject Destination;
+    public GameObject MapButtons;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -37,22 +38,26 @@ public class EventController : MonoBehaviour
 
     public void LoadOption(GameObject Event)
     {
+        MapButtons.gameObject.SetActive(false);
         ChoiceUI.SetActive(true);
         MainText.text = Event.GetComponent<CustomEvents>().MainText;
         options[0].text = Event.GetComponent<CustomEvents>().Options[0];
         options[1].text = Event.GetComponent<CustomEvents>().Options[1];
     }
-    public void Effect(int Option)
+    public void Effect(int Selected)
     {
         CustomEvents custom = chosenEvent.GetComponent<CustomEvents>();
-        playerStats.EffectStat(custom.StatEffected[Option], custom.MagnitutedOfChange[Option]);
+        if(custom != null && custom.effectors[Selected]) {
+        playerStats.EffectStat(custom.Option1EffectedStats[Selected], custom.MagnitutedOfChange[Selected]);
+        Debug.Log(custom.MagnitutedOfChange[Selected]);
         ChoiceUI.SetActive(false);
         ResultUI.SetActive(true);
-        Results.text = custom.Outcome[Option];
+        Results.text = custom.Outcome[Selected];
     }
     public void CloseMenu()
     {
         ResultUI.SetActive(false);
+        MapButtons.SetActive(true);
     }
 
 }
