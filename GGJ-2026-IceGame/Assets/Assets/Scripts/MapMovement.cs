@@ -1,6 +1,4 @@
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class MapMovement : MonoBehaviour
 {
@@ -32,6 +30,7 @@ public class MapMovement : MonoBehaviour
             EventController.direction = direction;
             EventController.range = Range;
             EventController.RandomiseEvent();
+            Debug.Log(Distance);
         }
         
     }

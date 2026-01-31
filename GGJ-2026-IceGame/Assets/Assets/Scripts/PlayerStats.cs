@@ -1,10 +1,6 @@
 using System.Collections;
 using TMPro;
-using UnityEditor.Rendering;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UIElements;
-using UnityEngine.UIElements.Experimental;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -31,7 +27,7 @@ public class PlayerStats : MonoBehaviour
         {
             Stats[WhichStat] = Stats[WhichStat]+ Change;
         }
-        FindFirstObjectByType<UpdateUIStats>().UpdateUI();
+       // FindFirstObjectByType<UpdateUIStats>().UpdateUI();
     }
    IEnumerator TimeTillFreeze()
    {

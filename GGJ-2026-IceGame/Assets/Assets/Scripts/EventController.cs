@@ -1,9 +1,6 @@
 using TMPro;
-using Unity.VisualScripting;
-using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class EventController : MonoBehaviour
 {
@@ -44,7 +41,7 @@ public class EventController : MonoBehaviour
 
     public void LoadOption(GameObject Event)
     {
-        MapButtons.gameObject.SetActive(false);
+        Map.gameObject.SetActive(false);
         ChoiceUI.SetActive(true);
         MainText.text = Event.GetComponent<CustomEvents>().MainText;
         if (Event.GetComponent<CustomEvents>().Options.Length <= 1) 
@@ -84,7 +81,7 @@ public class EventController : MonoBehaviour
     public void CloseMenu()
     {
         ResultUI.SetActive(false);
-        MapButtons.SetActive(true);
+        Map.SetActive(true);
     }
     public void MoveBack()
     {
