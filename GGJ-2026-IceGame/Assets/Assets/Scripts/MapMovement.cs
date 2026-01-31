@@ -1,9 +1,11 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class MapMovement : MonoBehaviour
 {
     public Button[] Neibours;
+    public float Range;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,10 +21,12 @@ public class MapMovement : MonoBehaviour
 
     public void EnableNeibours()
     {
-        foreach (Button button in Neibours) 
-        { 
-          button.enabled = true;
+        GameObject Player = GameObject.Find("Player");
+        float Distance = (transform.position - Player.transform.position).magnitude;
+        if (Distance < Range)
+        {
+            Player.transform.position = transform.position;
         }
-        GetComponent<Button>().enabled = false;
+        
     }
 }
