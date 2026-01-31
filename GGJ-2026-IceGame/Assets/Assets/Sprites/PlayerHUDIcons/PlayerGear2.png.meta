@@ -1,52 +1,10 @@
 fileFormatVersion: 2
-guid: 405a554ef4774c741982fc354e74e1a1
+guid: 9ff27b8dd59dab147a035651610d121a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6129230662981676483
-    second: PlayerGear_0
-  - first:
-      213: 8546586344205592899
-    second: PlayerGear_1
-  - first:
-      213: -9045798502542448435
-    second: PlayerGear_2
-  - first:
-      213: 3149058782695434176
-    second: PlayerGear_3
-  - first:
-      213: -1503506374569112946
-    second: PlayerGear_4
-  - first:
-      213: -8017018683844658488
-    second: PlayerGear_5
-  - first:
-      213: -3689764648505873358
-    second: PlayerGear_6
-  - first:
-      213: 1990938733510314047
-    second: PlayerGear_7
-  - first:
-      213: 6264873293288193263
-    second: PlayerGear_8
-  - first:
-      213: -1552639093755611353
-    second: PlayerGear_9
-  - first:
-      213: 7025434869844800431
-    second: PlayerGear_10
-  - first:
-      213: -2154780577085303912
-    second: PlayerGear_11
-  - first:
-      213: 6774749562247405652
-    second: PlayerGear_12
-  - first:
-      213: 5423595904955606126
-    second: PlayerGear_13
-  - first:
-      213: 2878191627824930674
-    second: PlayerGear_14
+      213: 7112458414125939626
+    second: PlayerGear2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -220,13 +178,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayerGear_0
+      name: PlayerGear2_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 96
-        width: 32
-        height: 32
+        y: 82
+        width: 36
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,130 +193,86 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d329b82af2990faa0800000000000000
-      internalID: -6129230662981676483
+      spriteID: aabf6b58e3784b260800000000000000
+      internalID: 7112458414125939626
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerGear_2
+      name: PlayerGear2_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 96
-        width: 32
-        height: 32
+        x: 36
+        y: 82
+        width: 36
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: dc8623a403ed67280800000000000000
-      internalID: -9045798502542448435
+      spriteID: 1d454f334df73c04a871eb43f3c6ec4c
+      internalID: -1582801268
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerGear_4
+      name: PlayerGear2_2
       rect:
         serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
+        x: 72
+        y: 82
+        width: 36
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e8ac5421be8722be0800000000000000
-      internalID: -1503506374569112946
+      spriteID: f02fcb4e9e568af40bdd83f410e1a151
+      internalID: 704698347
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerGear_6
+      name: PlayerGear2_3
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 82
+        width: 36
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bf831837b8049540996035bdd735541
+      internalID: 380242172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerGear2_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 23c6305f9925bccc0800000000000000
-      internalID: -3689764648505873358
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerGear_8
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fec3649411d41f650800000000000000
-      internalID: 6264873293288193263
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerGear_10
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fa3fdb1bacb5f7160800000000000000
-      internalID: 7025434869844800431
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerGear_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 96
-        width: 32
-        height: 32
+        y: 41
+        width: 36
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -367,20 +281,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc783118900bba14d9c310a913a77995
-      internalID: 8546586344205592899
+      spriteID: ff5680c4152992c4ebbe83bc39147ecd
+      internalID: 1890468519
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerGear_3
+      name: PlayerGear2_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
-        width: 32
-        height: 32
+        x: 36
+        y: 41
+        width: 36
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -389,20 +303,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b796b067990b2048878f811de91de5d
-      internalID: 3149058782695434176
+      spriteID: b5e848ae6dbb0e248b1e082c1a2028b2
+      internalID: 1979639944
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerGear_5
+      name: PlayerGear2_6
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
-        width: 32
-        height: 32
+        x: 72
+        y: 41
+        width: 36
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -411,20 +325,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f280bad91ca38641ba425aa1e9eadfa
-      internalID: -8017018683844658488
+      spriteID: 409e726cee332f6488e9cc7d911862c4
+      internalID: -1299864629
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerGear_7
+      name: PlayerGear2_7
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
+        x: 108
+        y: 41
+        width: 36
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -433,20 +347,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d79c40f7d87a6c446a01879eaef0d32e
-      internalID: 1990938733510314047
+      spriteID: 85c0059a2873c224389780bd2698bef7
+      internalID: -884212833
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerGear_9
+      name: PlayerGear2_8
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 36
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -455,8 +369,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9eaa67b88f8f126408a087abcab1d3c4
-      internalID: -1552639093755611353
+      spriteID: 0bf44ba039f82874b8b40a4bcf978ce7
+      internalID: 393376096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerGear2_9
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 0
+        width: 36
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c68b501cabea2640803b606e587cd27
+      internalID: -2112048163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerGear2_10
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 0
+        width: 36
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bea7cc044c07c594a8fbe46fbf6c1463
+      internalID: 1001314586
       vertices: []
       indices: 
       edges: []
@@ -465,7 +423,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 40a1a5b73f14e5c45b72c752e5911b94
+    spriteID: 367fb437351699b428d708ee9ab474f5
     internalID: 0
     vertices: []
     indices: 
@@ -475,17 +433,17 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      PlayerGear_0: -6129230662981676483
-      PlayerGear_1: 8546586344205592899
-      PlayerGear_10: 7025434869844800431
-      PlayerGear_2: -9045798502542448435
-      PlayerGear_3: 3149058782695434176
-      PlayerGear_4: -1503506374569112946
-      PlayerGear_5: -8017018683844658488
-      PlayerGear_6: -3689764648505873358
-      PlayerGear_7: 1990938733510314047
-      PlayerGear_8: 6264873293288193263
-      PlayerGear_9: -1552639093755611353
+      PlayerGear2_0: 7112458414125939626
+      PlayerGear2_1: -1582801268
+      PlayerGear2_10: 1001314586
+      PlayerGear2_2: 704698347
+      PlayerGear2_3: 380242172
+      PlayerGear2_4: 1890468519
+      PlayerGear2_5: 1979639944
+      PlayerGear2_6: -1299864629
+      PlayerGear2_7: -884212833
+      PlayerGear2_8: 393376096
+      PlayerGear2_9: -2112048163
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
