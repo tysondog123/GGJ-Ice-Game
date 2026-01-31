@@ -1,4 +1,7 @@
+using System.Collections;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UIElements.Experimental;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -6,27 +9,60 @@ public class PlayerStats : MonoBehaviour
     //public int Gear;
     //public int Sanity;
     //public int Fatigue;
+    [Header("1-Temprature, 2-Fatigue, 3-Gear status, 4-Hunger, 5-Sanity")]
     public int[] Stats;
-    public int StatMax;
+    public int[] StatMax;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
+    float TimeLeft=1800;
+    public TextMeshProUGUI Time;
+    public GameObject menu;
 
+    private void Start()
+    {
+        StartCoroutine(TimeTillFreeze());
+    }
     public void EffectStat(int WhichStat, int Change)
     {
-        if((Stats[WhichStat] += Change) <= StatMax)
+        if((Stats[WhichStat] += Change) <= StatMax[WhichStat])
         {
             Stats[WhichStat] += Change;
         }
         
     }
-    void Start()
-    {
+   IEnumerator TimeTillFreeze()
+   {
+        yield return new WaitForSeconds(1f);
+        TimeLeft--;
+        if (Time.IsActive())
+        {
+            updateUITime();
+        }
         
-    }
 
-    // Update is called once per frame
-    void Update()
+            StartCoroutine(TimeTillFreeze());
+   }
+    public void updateUITime()
     {
-        
+        if (TimeLeft - (Mathf.FloorToInt(TimeLeft / 60) * 60) > 9)
+        {
+            Time.text = Mathf.FloorToInt(TimeLeft / 60).ToString() + ":" + (TimeLeft - (Mathf.FloorToInt(TimeLeft / 60) * 60));
+        }
+        else
+        {
+            Time.text = Mathf.FloorToInt(TimeLeft / 60).ToString() + ":0" + (TimeLeft - (Mathf.FloorToInt(TimeLeft / 60) * 60));
+        }
+    }
+    public void OpenMenu()
+    {
+        if (menu.activeSelf) 
+        {
+            menu.SetActive(false);
+        }
+        else
+        {
+            menu.SetActive(true);
+            updateUITime();
+        }
     }
 }

@@ -19,7 +19,7 @@ public class MapMovement : MonoBehaviour
     }
     
 
-    public void EnableNeibours()
+    public void PlayerMovement()
     {
         GameObject Player = GameObject.Find("Player");
         float Distance = (transform.position - Player.transform.position).magnitude;

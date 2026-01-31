@@ -9,6 +9,9 @@ public class EventController : MonoBehaviour
     public TextMeshProUGUI[] options;
     public GameObject ChoiceUI;
 
+    public GameObject ResultUI;
+    public TextMeshProUGUI Results;
+
     PlayerStats playerStats;
     GameObject chosenEvent;
 
@@ -43,8 +46,13 @@ public class EventController : MonoBehaviour
     {
         CustomEvents custom = chosenEvent.GetComponent<CustomEvents>();
         playerStats.EffectStat(custom.StatEffected[Option], custom.MagnitutedOfChange[Option]);
-        MainText.text = custom.Outcome[Option];
-        //ChoiceUI.SetActive(false);
+        ChoiceUI.SetActive(false);
+        ResultUI.SetActive(true);
+        Results.text = custom.Outcome[Option];
+    }
+    public void CloseMenu()
+    {
+        ResultUI.SetActive(false);
     }
 
 }
