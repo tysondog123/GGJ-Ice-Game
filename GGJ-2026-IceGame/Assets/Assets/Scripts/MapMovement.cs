@@ -8,6 +8,7 @@ public class MapMovement : MonoBehaviour
     Vector3 direction;
     public GameObject PlayerPrevious;
     public GameObject PresetEvent;
+    public AudioClip Walk;
 
     public GameObject[] RangeRefrence;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -17,11 +18,6 @@ public class MapMovement : MonoBehaviour
         Range = (RangeRefrence[0].transform.position - RangeRefrence[1].transform.position).magnitude+10;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     
 
     public void PlayerMovement()

@@ -102,8 +102,10 @@ public class EventController : MonoBehaviour
     }
     public void WinCon()
     {
+        Debug.Log(1);
         if (direction.magnitude < range && direction.magnitude > 5)
         {
+            Debug.Log(2);
             SceneManager.LoadScene("Win");
         }
     }
