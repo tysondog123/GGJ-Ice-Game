@@ -50,11 +50,14 @@ MonoBehaviour:
   NumberChangedOnPass: 
   StatValueToPass: 0b0000000b000000
   StatMesured: 0100000001000000
+  MultipleNegatives: 0
+  SecondaryStatChanged: 0
+  SecondaryValueChange: 0
   MainText: "You see a large creature in the distance. You\u2019re not sure if it\u2019s
     your imagination but it seems to be looking your way?"
   Options:
   - Approach
-  - Run
+  - Retreat
   FailOutcome:
   - The Bear mauls you severely. Gear Status -2.
   - You run away fleeing. Move backwards.
