@@ -1,15 +1,17 @@
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class MapMovement : MonoBehaviour
 {
-    public Button[] Neibours;
     public float Range;
+    EventController EventController;
+    public GameObject Map;
+    Vector3 direction;
+    public GameObject PlayerPrevious;
+    public GameObject PresetEvent;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        EventController = FindAnyObjectByType<EventController>();
     }
 
     // Update is called once per frame
@@ -19,14 +21,21 @@ public class MapMovement : MonoBehaviour
     }
     
 
-    public void EnableNeibours()
+    public void PlayerMovement()
     {
         GameObject Player = GameObject.Find("Player");
-        float Distance = (transform.position - Player.transform.position).magnitude;
-        if (Distance < Range)
+        Vector3 Angle = (Player.transform.position- transform.position);
+        if (Angle.magnitude < Range && Angle.magnitude >5)
         {
-            Player.transform.position = transform.position;
+            GameObject spawned = Instantiate(PlayerPrevious, transform.position , Quaternion.identity);
+            spawned.transform.SetParent(gameObject.transform);
+            direction = Player.transform.position - transform.position;
+            Map.transform.position = Map.transform.position + Angle;
+            EventController.direction = Angle;
+            EventController.range = Range;
+            EventController.RandomiseEvent(PresetEvent);
         }
         
     }
+    
 }
