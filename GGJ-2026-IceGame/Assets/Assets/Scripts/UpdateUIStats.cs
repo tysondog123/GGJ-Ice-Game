@@ -16,6 +16,7 @@ public class UpdateUIStats : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void UpdateUI()
     {
+        Debug.Log(UiImages[0].sprite + "" + Temprature[Stats.Stats[0]]);
         UiImages[0].sprite = Temprature[Stats.Stats[0]];
         UiImages[1].sprite = Fatigue[Stats.Stats[1]];
         UiImages[2].sprite = Gear[Stats.Stats[2]];

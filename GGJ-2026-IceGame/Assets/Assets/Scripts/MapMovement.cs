@@ -15,7 +15,6 @@ public class MapMovement : MonoBehaviour
     {
         EventController = FindAnyObjectByType<EventController>();
         Range = (RangeRefrence[0].transform.position - RangeRefrence[1].transform.position).magnitude+10;
-        Debug.Log(Range);
     }
 
     // Update is called once per frame
@@ -29,15 +28,16 @@ public class MapMovement : MonoBehaviour
     {
         GameObject Player = GameObject.Find("Player");
         Vector3 Angle = (Player.transform.position- transform.position);
+        Debug.Log(Angle);
         if (Angle.magnitude < Range && Angle.magnitude >5)
         {
-            GameObject spawned = Instantiate(PlayerPrevious, transform.position , Quaternion.identity);
-            spawned.transform.SetParent(gameObject.transform);
             direction = Player.transform.position - transform.position;
             Map.transform.position = Map.transform.position + Angle;
             EventController.direction = Angle;
             EventController.range = Range;
             EventController.RandomiseEvent(PresetEvent);
+            GameObject spawned = Instantiate(PlayerPrevious, transform.position, Quaternion.identity);
+            spawned.transform.SetParent(gameObject.transform);
         }
         
     }

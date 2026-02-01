@@ -15,9 +15,9 @@ public class ButtonManager : MonoBehaviour
        
     }
 
-    public void OnStartButton() 
+    public void OnStartButton(string Scene) 
     {
-        SceneManager.LoadScene("");
+        SceneManager.LoadScene(Scene);
     }
 
     public void OnCreditsButton() 
@@ -27,6 +27,6 @@ public class ButtonManager : MonoBehaviour
 
     public void OnExitButton()
     {
-        SceneManager.LoadScene("");
+        Application.Quit();
     }
 }

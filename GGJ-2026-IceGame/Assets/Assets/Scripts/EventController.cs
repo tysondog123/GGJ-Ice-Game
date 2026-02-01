@@ -98,7 +98,7 @@ public class EventController : MonoBehaviour
     }
     public void MoveBack()
     {
-        Map.transform.position = Map.transform.position - direction;
+       //Map.transform.position = Map.transform.position - direction;
     }
     public void WinCon()
     {

@@ -17865,7 +17865,6 @@ GameObject:
   m_Component:
   - component: {fileID: 707620819}
   - component: {fileID: 707620818}
-  - component: {fileID: 707620817}
   - component: {fileID: 707620816}
   m_Layer: 0
   m_Name: MAp
@@ -17918,14 +17917,6 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!81 &707620817
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 707620815}
-  m_Enabled: 1
 --- !u!20 &707620818
 Camera:
   m_ObjectHideFlags: 0
@@ -25541,7 +25532,9 @@ MonoBehaviour:
   Map: {fileID: 0}
   PlayerPrevious: {fileID: 0}
   PresetEvent: {fileID: 0}
-  RangeRefrence: []
+  RangeRefrence:
+  - {fileID: 1940694516}
+  - {fileID: 1692030673}
 --- !u!222 &1013668709
 CanvasRenderer:
   m_ObjectHideFlags: 0
