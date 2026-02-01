@@ -26,8 +26,9 @@ public class PlayerStats : MonoBehaviour
         if(Stats[WhichStat] + Change <= StatMax[WhichStat])
         {
             Stats[WhichStat] = Stats[WhichStat]+ Change;
+            FindFirstObjectByType<UpdateUIStats>().UpdateUI();
         }
-       // FindFirstObjectByType<UpdateUIStats>().UpdateUI();
+        
     }
    IEnumerator TimeTillFreeze()
    {

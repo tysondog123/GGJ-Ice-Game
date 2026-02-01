@@ -6,6 +6,7 @@ public class MapMovement : MonoBehaviour
     EventController EventController;
     public GameObject Map;
     Vector3 direction;
+    public GameObject PlayerPrevious;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,15 +23,16 @@ public class MapMovement : MonoBehaviour
     public void PlayerMovement()
     {
         GameObject Player = GameObject.Find("Player");
-        float Distance = (Player.transform.position- transform.position).magnitude;
-        if (Distance < Range && Distance >5)
+        Vector3 Angle = (Player.transform.position- transform.position);
+        if (Angle.magnitude < Range && Angle.magnitude >5)
         {
+            GameObject spawned = Instantiate(PlayerPrevious, transform.position , Quaternion.identity);
+            spawned.transform.SetParent(gameObject.transform);
             direction = Player.transform.position - transform.position;
-            Map.transform.position = Map.transform.position + direction;
-            EventController.direction = direction;
+            Map.transform.position = Map.transform.position + Angle;
+            EventController.direction = Angle;
             EventController.range = Range;
             EventController.RandomiseEvent();
-            Debug.Log(Distance);
         }
         
     }
