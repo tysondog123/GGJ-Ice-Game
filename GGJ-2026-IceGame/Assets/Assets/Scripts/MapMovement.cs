@@ -2,16 +2,20 @@ using UnityEngine;
 
 public class MapMovement : MonoBehaviour
 {
-    public float Range;
+    float Range;
     EventController EventController;
     public GameObject Map;
     Vector3 direction;
     public GameObject PlayerPrevious;
     public GameObject PresetEvent;
+
+    public GameObject[] RangeRefrence;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         EventController = FindAnyObjectByType<EventController>();
+        Range = (RangeRefrence[0].transform.position - RangeRefrence[1].transform.position).magnitude+10;
+        Debug.Log(Range);
     }
 
     // Update is called once per frame
