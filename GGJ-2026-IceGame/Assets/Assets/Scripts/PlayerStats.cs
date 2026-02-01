@@ -26,7 +26,6 @@ public class PlayerStats : MonoBehaviour
         
         if (Stats[WhichStat] + Change <= StatMax[WhichStat] && Stats[WhichStat] + Change >= 0)
         {
-            Debug.Log(WhichStat + "" + Change);
             Stats[WhichStat] = Stats[WhichStat]+ Change;
             FindFirstObjectByType<UpdateUIStats>().UpdateUI();
             if (Stats[WhichStat] <= 0)

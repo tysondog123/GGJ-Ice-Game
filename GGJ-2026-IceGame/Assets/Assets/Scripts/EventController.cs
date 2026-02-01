@@ -21,6 +21,7 @@ public class EventController : MonoBehaviour
     public Vector3 direction;
     public GameObject Map;
     public float range;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -32,10 +33,18 @@ public class EventController : MonoBehaviour
     {
         
     }
-    public void RandomiseEvent()
+    public void RandomiseEvent(GameObject PresetEvent)
     {
-        chosenEvent=Events[Random.Range(0,Events.Length)];
-        LoadOption(chosenEvent);
+        if (PresetEvent == null)
+        {
+            chosenEvent = Events[Random.Range(0, Events.Length)];
+            LoadOption(chosenEvent);
+        }
+        else
+        {
+            LoadOption(PresetEvent);
+            PresetEvent = null;
+        }
     }
 
 

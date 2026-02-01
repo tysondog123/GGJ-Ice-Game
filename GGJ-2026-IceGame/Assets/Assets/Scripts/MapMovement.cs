@@ -7,6 +7,7 @@ public class MapMovement : MonoBehaviour
     public GameObject Map;
     Vector3 direction;
     public GameObject PlayerPrevious;
+    public GameObject PresetEvent;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -32,7 +33,7 @@ public class MapMovement : MonoBehaviour
             Map.transform.position = Map.transform.position + Angle;
             EventController.direction = Angle;
             EventController.range = Range;
-            EventController.RandomiseEvent();
+            EventController.RandomiseEvent(PresetEvent);
         }
         
     }
