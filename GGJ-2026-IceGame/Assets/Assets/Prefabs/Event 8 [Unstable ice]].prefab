@@ -50,6 +50,9 @@ MonoBehaviour:
   NumberChangedOnPass: 00000000
   StatValueToPass: 0b000000
   StatMesured: 01000000
+  MultipleNegatives: 0
+  SecondaryStatChanged: 0
+  SecondaryValueChange: 0
   MainText: ' The ground beneath you shifts and stirs as the ice sheet you appear
     to be on moves of its own volition'
   Options:

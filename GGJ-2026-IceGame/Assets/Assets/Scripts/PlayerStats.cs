@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -23,12 +24,25 @@ public class PlayerStats : MonoBehaviour
     public void EffectStat(int WhichStat, int Change)
     {
         
-        if(Stats[WhichStat] + Change <= StatMax[WhichStat])
+        if (Stats[WhichStat] + Change <= StatMax[WhichStat] && Stats[WhichStat] + Change >= 0)
         {
+            Debug.Log(WhichStat + "" + Change);
             Stats[WhichStat] = Stats[WhichStat]+ Change;
             FindFirstObjectByType<UpdateUIStats>().UpdateUI();
+            if (Stats[WhichStat] <= 0)
+            {
+                SceneManager.LoadScene("Lose");
+            }
         }
-        
+        else if(Stats[WhichStat] + Change >= StatMax[WhichStat])
+        {
+            Stats[WhichStat]=StatMax[WhichStat];
+        }else if(Stats[WhichStat] + Change <= 0)
+        {
+           SceneManager.LoadScene("Lose");
+        }
+
+
     }
    IEnumerator TimeTillFreeze()
    {

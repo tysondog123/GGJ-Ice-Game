@@ -66,6 +66,10 @@ public class EventController : MonoBehaviour
         if(custom != null && playerStats.Stats[custom.StatMesured[Selected]]< custom.StatValueToPass[Selected])
         {
             playerStats.EffectStat(custom.StatChangeOnFail[Selected], custom.NumberChangedOnFail[Selected]);
+            if (custom.MultipleNegatives)
+            {
+                playerStats.EffectStat(custom.SecondaryStatChanged,custom.SecondaryValueChange);
+            }
             ChoiceUI.SetActive(false);
             ResultUI.SetActive(true);
             Results.text = custom.FailOutcome[Selected];

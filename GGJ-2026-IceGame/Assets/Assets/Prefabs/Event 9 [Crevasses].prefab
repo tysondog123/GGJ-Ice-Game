@@ -50,6 +50,9 @@ MonoBehaviour:
   NumberChangedOnPass: 0100000000000000
   StatValueToPass: 050000000b000000
   StatMesured: 0100000001000000
+  MultipleNegatives: 1
+  SecondaryStatChanged: 2
+  SecondaryValueChange: -2
   MainText: The path ahead has been ruptured and scarred by countless crevasses.
     Do you press forward, trying your luck or do you go back?
   Options:

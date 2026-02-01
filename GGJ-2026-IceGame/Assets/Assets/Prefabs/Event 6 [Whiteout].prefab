@@ -50,6 +50,9 @@ MonoBehaviour:
   NumberChangedOnPass: ffffffff
   StatValueToPass: 07000000
   StatMesured: 04000000
+  MultipleNegatives: 1
+  SecondaryStatChanged: 4
+  SecondaryValueChange: -1
   MainText: ' The snow descends around you heavily, obscuring your vision. '
   Options:
   - Continue

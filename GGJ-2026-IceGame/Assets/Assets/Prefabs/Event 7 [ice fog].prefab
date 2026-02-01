@@ -50,6 +50,9 @@ MonoBehaviour:
   NumberChangedOnPass: ffffffff
   StatValueToPass: 07000000
   StatMesured: 02000000
+  MultipleNegatives: 1
+  SecondaryStatChanged: 2
+  SecondaryValueChange: -1
   MainText: 'Evidence of recent human activity is clear here as deep tire tracks
     etch itself into the deep snow. However, deep rime ice has started to form, obscuring
     your vision and direction where to go. '
@@ -62,4 +65,4 @@ MonoBehaviour:
 '
   PassOutcome:
   - Your gear protects you from the arctic conditions and takes the brunt of nature's
-    wraith. Gear Status -1.
+    wrath. Gear Status -1.

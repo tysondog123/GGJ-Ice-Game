@@ -9,7 +9,9 @@ public class CustomEvents : MonoBehaviour
     public int[] NumberChangedOnPass;
     public int[] StatValueToPass = new int[2];
     public int[] StatMesured = new int[2];
-    
+    public bool MultipleNegatives;
+    public int SecondaryStatChanged;
+    public int SecondaryValueChange;
 
     [TextArea(10, 10)]
     public string MainText;
