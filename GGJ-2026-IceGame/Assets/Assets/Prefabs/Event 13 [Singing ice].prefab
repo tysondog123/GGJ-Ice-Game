@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4899459849485558106}
   - component: {fileID: 9022999564263764796}
   m_Layer: 0
-  m_Name: 'Event 4 [Crack in the ice]'
+  m_Name: 'Event 13 [Singing ice]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,25 +44,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aedab12da9c60345844e11bc800c057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StatChangeOnFail: 0000000000000000
-  StatChangeOnPass: 0400000000000000
-  NumberChangedOnFail: f6ffffff00000000
-  NumberChangedOnPass: 0100000000000000
-  StatValueToPass: 070000000b000000
-  StatMesured: 0100000000000000
+  StatChangeOnFail: 04000000
+  StatChangeOnPass: 00000000
+  NumberChangedOnFail: 02000000
+  NumberChangedOnPass: 00000000
+  StatValueToPass: 2c000000
+  StatMesured: 00000000
   MultipleNegatives: 0
   SecondaryStatChanged: 0
   SecondaryValueChange: 0
-  MainText: As you trudge along the frozen landscape, a loud crack echos around you,
-    emanating from beneath your feet.
+  MainText: "On your travels, you hear a strange low humming noise on a particularly
+    flat ice plane. You\u2019ve heard of the possibility of the arctic actually making
+    noise, known as ice singing caused by the temperature making the ice expand and
+    retract. "
   Options:
-  - Run
-  - Retreat
+  - Listen
   FailOutcome:
-  - You fall through the ice submerging yourself in an unseen watery lake. Body Warmth
-    -10.
-  - 'You Retreat backward '
+  - "Your pace slows as you hear the ice making noises of \u2018hums\u2019 and \u2018pew
+    pews\u2019 as the world around seems to come alive with its own voice. \r\n"
   PassOutcome:
-  - You manage to move carefully and swiftly enough to avoid falling through the
-    ice, you breathe a sigh of relief and continue forward. Sanity +1.
-  - 'You Retreat backward '
+  - 

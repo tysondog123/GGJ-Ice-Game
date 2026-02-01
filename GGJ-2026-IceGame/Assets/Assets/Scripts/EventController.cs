@@ -98,12 +98,14 @@ public class EventController : MonoBehaviour
     }
     public void MoveBack()
     {
-        Map.transform.position = Map.transform.position - direction;
+       //Map.transform.position = Map.transform.position - direction;
     }
     public void WinCon()
     {
+        Debug.Log(1);
         if (direction.magnitude < range && direction.magnitude > 5)
         {
+            Debug.Log(2);
             SceneManager.LoadScene("Win");
         }
     }
