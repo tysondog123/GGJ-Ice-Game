@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StatChangeOnFail: 0300000000000000
   StatChangeOnPass: 
-  NumberChangedOnFail: ffffffff00000000
+  NumberChangedOnFail: 0100000000000000
   NumberChangedOnPass: 
   StatValueToPass: 0b0000000b000000
   StatMesured: 0100000001000000
@@ -59,6 +59,6 @@ MonoBehaviour:
   - Approach
   - Retreat
   FailOutcome:
-  - The Bear is dead, offering some nourishment from its remains. Hunger -1.
+  - The Bear is dead, offering some nourishment from its remains. Hunger 1.
   - You run away fleeing. Move backwards.
   PassOutcome: []

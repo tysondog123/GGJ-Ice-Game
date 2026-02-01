@@ -50,6 +50,9 @@ MonoBehaviour:
   NumberChangedOnPass: 0100000000000000
   StatValueToPass: 070000000b000000
   StatMesured: 0100000000000000
+  MultipleNegatives: 0
+  SecondaryStatChanged: 0
+  SecondaryValueChange: 0
   MainText: As you trudge along the frozen landscape, a loud crack echos around you,
     emanating from beneath your feet.
   Options:
@@ -61,6 +64,5 @@ MonoBehaviour:
   - 'You Retreat backward '
   PassOutcome:
   - You manage to move carefully and swiftly enough to avoid falling through the
-    ice, you breathe a sigh of relief and continue forward. Move closer to camp +1.
-    Sanity +1.
+    ice, you breathe a sigh of relief and continue forward. Sanity +1.
   - 'You Retreat backward '
