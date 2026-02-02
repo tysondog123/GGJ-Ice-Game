@@ -58,7 +58,7 @@ MonoBehaviour:
     ago. \r\nSomehow, you have managed to find Site #9, but how did it end up here
     so far away from its original location?\r\n"
   Options:
-  - Serch
+  - Search
   FailOutcome:
   - "Site #9 *\r\nYou see a blinking light in the distance. To your surprise you
     realise that the light is emanating from a tower you placed there with your team
